@@ -18,8 +18,8 @@ public class ScheduledConfiguration {
        // System.out.println(Thread.currentThread().getName()+" The Task1 executed at "+ new Date());
         try {
             //delete file from file array
-            //schedular.deleteFiles(file);
-            //Thread.sleep(10000);
+            schedular.deleteFiles(file);
+            Thread.sleep(10000);
             //display remaining files
             schedular.displayFiles(file);
         } catch (InterruptedException e) {
