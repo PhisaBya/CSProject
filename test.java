@@ -28,12 +28,10 @@ public class HighchartsExportServerLoadTest {
             executor.submit(() -> {
                 try {
                     // Define the request body (adjust as needed)
-                    String jsonBody = "{"
-                + "\"infile\": \"{\\\"chart\\\":{\\\"type\\\":\\\"line\\\"},\\\"title\\\":{\\\"text\\\":\\\"Simple Line Chart\\\"},\\\"xAxis\\\":{\\\"categories\\\":[\\\"Jan\\\",\\\"Feb\\\",\\\"Mar\\\",\\\"Apr\\\",\\\"May\\\",\\\"Jun\\\",\\\"Jul\\\",\\\"Aug\\\",\\\"Sep\\\",\\\"Oct\\\",\\\"Nov\\\",\\\"Dec\\\"]},\\\"yAxis\\\":{\\\"title\\\":{\\\"text\\\":\\\"Value\\\"}},\\\"series\\\":[{\\\"name\\\":\\\"2019\\\",\\\"data\\\":[29.9,71.5,106.4,129.2,144.0,176.0,135.6,148.5,216.4,194.1,95.6,54.4}]}},\","  // Chart JSON data as a string
-                + "\"type\": \"image/png\","
-                + "\"width\": 800,"
-                + "\"scale\": 2"
-                + "}"; // Replace with actual JSON input
+                    String jsonBody = "{\n" +
+                          "  \"infile\": \"{\\\"chart\\\":{\\\"type\\\":\\\"line\\\"},\\\"title\\\":{\\\"text\\\":\\\"Simple Line Chart\\\"},\\\"xAxis\\\":{\\\"categories\\\":[\\\"Jan\\\",\\\"Feb\\\",\\\"Mar\\\",\\\"Apr\\\",\\\"May\\\",\\\"Jun\\\",\\\"Jul\\\",\\\"Aug\\\",\\\"Sep\\\",\\\"Oct\\\",\\\"Nov\\\",\\\"Dec\\\"]},\\\"yAxis\\\":{\\\"title\\\":{\\\"text\\\":\\\"Value\\\"}},\\\"series\\\":[{\\\"name\\\":\\\"2019\\\",\\\"data\\\":[29.9,71.5,106.4,129.2,144.0,176.0,135.6,148.5,216.4,194.1,95.6,54.4}]}},\n" +
+                          "  \"type\": \"image/png\"\n" +
+                          "}"; // Replace with actual JSON input
 
                     // Build the HTTP POST request
                     HttpRequest request = HttpRequest.newBuilder()
